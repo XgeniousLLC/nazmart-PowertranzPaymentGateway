@@ -1,0 +1,39 @@
+{
+    "name": "PowertranzPaymentGateway",
+    "alias": "powertranzpaymentgateway",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\PowertranzPaymentGateway\\Providers\\PowertranzPaymentGatewayServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "nazmartMetaData": {
+        "plugin_type": "external",
+        "paymentGateway": {
+            "name": "Powertranz",
+            "slug": "powertranz",
+            "tenant": true,
+            "chargeCustomerMethodNameSpace": "Modules\\PowertranzPaymentGateway\\Http\\Controllers\\PowertranzPaymentGatewayController",
+            "chargeCustomerMethodName": "chargeCustomer",
+            "test_mode": true,
+            "status": true,
+            "extraInfoMarkupBlade" : "",
+            "logo_file": "payment-logo.png",
+            "admin_settings": {
+                "show_admin_landlord": true,
+                "show_admin_tenant": true,
+                "menu_item": [
+                    {
+                        "id": "powertranz-settings-menu",
+                        "label": "Powertranz Settings",
+                        "route": "powertranzpoaymentgateway.landlord.admin.settings",
+                        "tenantRoute": "powertranzpoaymentgateway.tenant.admin.settings"
+                    }
+                ]
+            }
+        }
+    }
+}
